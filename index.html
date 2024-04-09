@@ -28,6 +28,59 @@
 
     ">
       <a href="dandelion.html">下一页</a>
+ <p id="demo">点击显示时间</p>
+
+<button type="button" onclick="displayDate()">显示日期</button>
+
+<script>
+function displayDate(){
+document.getElementById("demo").innerHTML=Date();
+}
+</script>
+
+<p>点击弹出界面</p>
+
+<button onclick="myFunction()">弹出界面</button>
+	
+<script>
+function myFunction(){
+setTimeout(function(){alert("你好呀")},1000);
+}	
+</script>
+
+<p>循环计数</p>
+
+<form>
+<input type="button" value="开始计数" onclick="doTimer()"/>
+<input type="text" id="txt"/>
+<input type="button" value="停止计数" onclick="stopCount()"/>
+</form>
+	
+<script>
+	var c=0;
+	var t;
+	var timer_is_on=0;
+
+	function timedCount(){
+	document.getElementById("txt").value=c;
+	c=c+1;
+	t=setTimeout(function(){timedCount()},1000);
+	}
+
+	function doTimer(){
+		if (!timer_is_on){
+		timer_is_on=1;
+		timedCount();
+			}
+	}
+
+	function stopCount(){
+		clearTimeout(t);
+		timer_is_on=0;
+	}
+</script>
+
+      
       <p>枫桥夜泊
         <p>[作者] 张继 [朝代] 唐</p>
         月落乌啼霜满天，江枫渔火对愁眠。姑苏城外寒山寺，夜半钟声到客船。 </p>
