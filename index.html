@@ -1,113 +1,121 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>一个小工具</title>
-    <style>  
-      body {
-        margin: 0;
-      }
+    <title>个人网页</title>
+    <style>
+        body {
+            display: block;
+            margin: auto;
+            width: 600px;
+            background-color: #e9ebec;
+        }
+
+        @media (max-width:600px) {
+        }
+    
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div style="
-    background-color: #f1f2f3;
-    text-align: center;
-    padding: 40px;
-    ">
-      <img src="https://s21.ax1x.com/2024/03/31/pF7ZSWn.jpg" alt="蒲公英" width="80" height="90">
-      </div>
+        display: flex;
+        flex-direction: row;
+        ">
+        <div style="
+        background-color: #ccd1d3;
+        text-align:left;
+        padding: 1px;
+        flex: 1;
+        ">
+            <img src="https://s21.ax1x.com/2024/03/31/pF7ZSWn.jpg" alt="" width="150" height="150">
+        </div>
+
+        <div style="
+        background-color: #ccd1d3;
+        padding: 0;
+        align-items: left;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0;
+        flex: 4;
+      ">
+
+            <p style="margin: 0;padding: 10px;font-size: 20px">简介</p>
+            <table border="0" cellpadding="5" cellspacing="0" width="auto" ;>
+                <tr>
+                    <td>姓名：</td>
+                    <td>Aangeles</td>
+                    <td>&nbsp</td>
+                    <td>籍贯：</td>
+                    <td>湖北</td>
+                </tr>
+                <tr>
+                    <td>性别：</td>
+                    <td>男</td>
+                    <td>&nbsp</td>
+                    <td>学历：</td>
+                    <td>大专</td>
+                </tr>
+                <tr>
+                    <td>年龄：</td>
+                    <td>28</td>
+                    <td>&nbsp</td>
+                    <td>电话：</td>
+                    <td>15207261836</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
     <div style="
+    background-color: #ccd1d3;
+    border: #eaedf0 1px solid;
     width: auto;
-    margin: 40px auto;
-    padding: 15px;
-    line-height: 1.5;
-    background-color: #707070;
-    color: orange
+    margin: 1px auto;
+    padding: 10px;
+    line-height: 1;
+    color: rgb(14, 14, 14)
 
     ">
-      <a href="dandelion.html">下一页</a>
- <p id="demo">点击显示时间</p>
+        <a href="dandelion.html">下一页</a>
+        <p id="demo">点击显示时间</p>
 
-<button type="button" onclick="displayDate()">显示日期</button>
+        <button type="button" onclick="displayDate()">显示日期</button>
 
-<script>
-function displayDate(){
-document.getElementById("demo").innerHTML=Date();
-}
-</script>
+        <script>
+            function displayDate() {
+                document.getElementById("demo").innerHTML = Date();
+            }
+        </script>
 
-<p>点击弹出界面</p>
-
-<button onclick="myFunction()">弹出界面</button>
-	
-<script>
-function myFunction(){
-setTimeout(function(){alert("你好呀")},1000);
-}	
-</script>
-
-<p>循环计数</p>
-
-<form>
-<input type="button" value="开始计数" onclick="doTimer()"/>
-<input type="text" id="txt"/>
-<input type="button" value="停止计数" onclick="stopCount()"/>
-</form>
-	
-<script>
-	var c=0;
-	var t;
-	var timer_is_on=0;
-
-	function timedCount(){
-	document.getElementById("txt").value=c;
-	c=c+1;
-	t=setTimeout(function(){timedCount()},1000);
-	}
-
-	function doTimer(){
-		if (!timer_is_on){
-		timer_is_on=1;
-		timedCount();
-			}
-	}
-
-	function stopCount(){
-		clearTimeout(t);
-		timer_is_on=0;
-	}
-</script>
-
-      
-      <p>枫桥夜泊
+        <p>枫桥夜泊
         <p>[作者] 张继 [朝代] 唐</p>
         月落乌啼霜满天，江枫渔火对愁眠。姑苏城外寒山寺，夜半钟声到客船。 </p>
-      <p>春日
+        <p>春日
         <p>[作者] 朱熹 [朝代] 宋</p>
         胜日寻芳泗水滨，无边光景一时新。等闲识得东风面，万紫千红总是春。 </p>
-      <p>竹石
+        <p>竹石
         <p>[作者] 郑燮 [朝代] 清</p>
         咬定青山不放松，立根原在破岩中。千磨万击还坚劲，任尔东西南北风。 </p>
-      <p>出塞二首
+        <p>出塞二首
         <p>[作者] 王昌龄 [朝代] 唐</p>
         秦时明月汉时关，万里长征人未还。但使龙城飞将在，不教胡马度阴山。骝马新跨白玉鞍，战罢沙场月色寒。城头铁鼓声犹振，匣里金刀血未干。 </p>
-      <p>古朗月行
-        <p>[作者] 李白 [朝代] 唐</p>
-        小时不识月，呼作白玉盘。又疑瑶台镜，飞在青云端。仙人垂两足，桂树何团团。白兔捣药成，问言与谁餐。蟾蜍蚀圆影，大明夜已残。羿昔落九乌，天人清且安。阴精此沦惑，去去不足观。忧来其如何，凄怆摧心肝。 </p>
-     </p>
-      
+
     </div>
     <div style="
-    background-color: #f1f2f3;
+    background-color: #ccd1d3;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
     font-size: 15px;
+    border: #eaedf0 1px solid;
     ">
-    <a href="dandelion.html">我的网站</a>
-    <a href="https://kangwenchang.com/">友情链接元岛</a>
-   
+        <a href="dandelion.html">我的网站</a>
+        <a href="https://kangwenchang.com/">友情链接元岛</a>
+
     </div>
-  </body>
+</body>
+
 </html>
